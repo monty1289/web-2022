@@ -92,3 +92,17 @@ body{
 img{
     width: 100%;
 }
+
+@media (max-width: 900px){
+    .tree{
+        visibility: hidden;
+    }
+
+    .reservations{
+        display: none;
+    }
+
+    .heading div{
+        font-size: 12vw;
+    }
+}
