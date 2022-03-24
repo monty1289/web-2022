@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffffff;
+    padding: 0px;
+}
+
+#main{
+    color: rgb(33, 56, 117);
+}
+
+.deals{
+   justify-content: center;
+}
+
+.deals ul{
+    list-style:none;
+    padding: 10px;    
+    background: rgb(33, 56, 117);
+    color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;    
+    align-items: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+  
+  .deals ul li:before {
+    content: '✓ ';
+  }
