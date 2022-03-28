@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --main-bg-colour:#e0e1df;
+    --main-brand-colour:#53624e;
+
+}
+
 body{
     background: #e0e1df;
     padding: 40px;
