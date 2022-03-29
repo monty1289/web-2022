@@ -42,17 +42,13 @@ body{
     width: 100%;
     background-color: rgb(255, 255, 255);
     position: sticky;
-    display: flex;
-    flex-wrap: nowrap;
-    -webkit-box-pack: justify;
+    display: flex;   
     justify-content: space-between;
-    height: 70px;
-    transition: top 550ms ease 0s;
+    height: 70px;    
     z-index: 97;
     border-top: 1px solid rgb(222, 225, 234);
     border-bottom: 1px solid rgb(222, 225, 234);
-    top: 0px;
-    box-shadow: rgb(255 255 255) 20px -0.5px 0px -0.5px;
+    top: 0px;    
     text-transform: uppercase;
 }
 
@@ -69,12 +65,8 @@ body{
 .left-nav{
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    
-    
+    flex-direction: column;    
 }
-
-
 
 .center-nav{
     background-color: rgb(255, 255, 255);

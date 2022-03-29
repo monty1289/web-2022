@@ -36,6 +36,11 @@ body{
     margin-right: auto;
 }
 
+.menu{
+    font-size: 32px;
+    padding-left: 30px;
+}
+
 .heading{
     margin-top: 150px;
     font-size: 70px;
