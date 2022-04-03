@@ -103,3 +103,56 @@ body{
     height: 40px;
     color: rgb(33, 56, 117);
 }
+
+.collection-pormotion{
+    height: 50vw;
+    background-color:blue;
+    position: relative;
+    justify-content: center;
+}
+
+.img{
+    width: auto;
+    height: 100%;
+}
+
+.floatingText{   
+    position:absolute; 
+    height: 300px;
+    width: 70%;
+    padding: 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.4);
+    left: 15%;;
+    top: 50%;
+    z-index: 1;
+}
+
+.title1 {
+    font-size: 60px;
+    font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.title2 {
+    font-size: 60px;
+    font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.gender {
+    font-size: 20px;
+    font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 40px;
+}
+
+
+
