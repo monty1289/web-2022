@@ -41,7 +41,8 @@ body{
 .navbar{
     width: 100%;
     background-color: rgb(255, 255, 255);
-    position: sticky;
+    position: fixed;
+    margin-top: 40px;
     display: flex;   
     justify-content: space-between;
     height: 70px;    
@@ -104,16 +105,15 @@ body{
     color: rgb(33, 56, 117);
 }
 
-.collection-pormotion{
-    height: 50vw;
-    background-color:blue;
+.collection-pormotion{    
+    background-color:rgb(255, 255, 255);
     position: relative;
     justify-content: center;
 }
 
-.img{
-    width: auto;
-    height: 100%;
+.main-img{
+    width: 100vh;
+    height: auto;
 }
 
 .floatingText{   
@@ -145,13 +145,19 @@ body{
     color: #ffffff;
 }
 
-.gender {
+.shop-now {
     font-size: 20px;
     font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
     line-height: 1;
     text-transform: uppercase;
     color: #ffffff;
     padding-top: 40px;
+}
+
+.womenKidsMen{
+    margin-top:1000cm;
+    padding: 2000px;
+    background-color: rgb(31, 18, 172);
 }
 
 
