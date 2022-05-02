@@ -17,9 +17,6 @@ body{
     color: rgb(33, 56, 117);
 }
 
-.deals{
-   justify-content: center;
-}
 
 .deals ul{
     list-style:none;
@@ -153,10 +150,8 @@ body{
 
 .womenKidsMen{    
     background-color: #ffffff;    
-    display: flex;
-    align-items: center;
-    
-    display: flex;    
+    display: inline-block;
+    align-items: center;       
     justify-content:space-evenly;
     
     
@@ -167,6 +162,7 @@ body{
     background-size: cover;
     height: 300px;
     width: 500px;
+    margin: 50px;
 }
 
 .kids{
@@ -174,6 +170,7 @@ body{
     height: 300px;
     width: 500px;
     background-size: cover;
+    margin: 50px;
 }
 
 .men{
@@ -181,6 +178,7 @@ body{
     height: 300px;
     width: 500px;
     background-size: cover;
+    margin: 50px;
 }
 
 
