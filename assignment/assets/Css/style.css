@@ -106,12 +106,10 @@ body{
 }
 
 .collection-pormotion{    
-    background-color:rgb(255, 255, 255);
-    position: relative;
+    background-image: url('assets/Images/resize.webp'); 
+    background-size: contain; 
+    display: flex;  
     justify-content: center;
-}
-
-.main-img{
     width: 100vh;
     height: auto;
 }
@@ -158,6 +156,10 @@ body{
     margin-top:1000cm;
     padding: 2000px;
     background-color: rgb(31, 18, 172);
+}
+
+.women{
+    background-image: url('as');
 }
 
 

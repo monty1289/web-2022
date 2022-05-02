@@ -136,6 +136,9 @@ olympics.sort((a,b) => (a.gold + a.silver + a.bronze) > (b.gold + b.silver + b.b
 
 let topTen = olympics.filter(x => (x.gold + x.silver + x.bronze) > 30)
 
-console.log(topTen)
+console.log(topTen);
 
 
+let div = document.querySelector("div");
+console.log(div);
+div.style.color = "red";
