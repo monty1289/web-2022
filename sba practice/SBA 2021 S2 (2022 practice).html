@@ -95,9 +95,13 @@
             {"name" : "Aladdin"}
         ];
 
-        let aPeople;    
-
+        
         /* PUT YOUR CODE HERE */
+        
+        let aPeople = people.filter (person => person[1].length == "A");
+        
+        console.log(aPeople)
+
 
     </script>
 
@@ -120,7 +124,8 @@
     <style>
         .container{ border: 2px solid hotpink;background:lightpink;width:500px;height:500px; }
 
-        .inner{ 
+        .inner{
+            display:block;
             width:100%;
             padding:30px;
             border:6px solid blue;

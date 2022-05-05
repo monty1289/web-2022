@@ -142,3 +142,6 @@ console.log(topTen);
 let div = document.querySelector("div");
 console.log(div);
 div.style.color = "red";
+
+
+ 

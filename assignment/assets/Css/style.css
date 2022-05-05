@@ -37,8 +37,7 @@ body{
 .navbar{
     width: 100%;
     background-color: rgb(255, 255, 255);
-    position: fixed;
-    margin-top: 40px;
+    position: sticky;    
     display: flex;   
     justify-content: space-between;
     height: 70px;    
@@ -96,8 +95,7 @@ body{
 }
 
 .logo{
-    width: 100%;
-    height: 40px;
+    height: 100%;
     color: rgb(33, 56, 117);
 }
 
@@ -148,38 +146,37 @@ body{
     padding-top: 40px;
 }
 
-.womenKidsMen{    
-    background-color: #ffffff;    
-    display: inline-block;
+.womanKidsMen{    
+    background-color: #ffffff;       
     align-items: center;       
     justify-content:space-evenly;
-    
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
 }
 
 .women{
+    display: flex;
     background-image: url('../Images/woman.webp');
     background-size: cover;
-    height: 300px;
-    width: 500px;
+    height: 300px;    
     margin: 50px;
 }
 
 .kids{
     background-image: url('../Images/kids.webp');
-    height: 300px;
-    width: 500px;
+    height: 300px;    
     background-size: cover;
     margin: 50px;
 }
 
 .men{
     background-image: url('../Images/men.webp');
-    height: 300px;
-    width: 500px;
+    height: 300px;    
     background-size: cover;
     margin: 50px;
 }
+
+
 
 
 

@@ -1,15 +1,15 @@
-let myfunc = () => {
-    let x = "Monty";
-    console.log(x);
-}
+// let myfunc = () => {
+//     let x = "Monty";
+//     console.log(x);
+// }
 
-myfunc();
+// myfunc();
 
-let matrix = [
-    [1,0,1],
-    [0,1,0],
-    [1,1,1]
-]
+// let matrix = [
+//     [1,0,1],
+//     [0,1,0],
+//     [1,1,1]
+// ]
 
 // matrix.forEach((row,i) => {
 //     console.log(row,i); //each row of matrix
@@ -18,11 +18,11 @@ let matrix = [
 //     });
 // });
 
-let people = [
-    ["adon", "moskal", "(canadian)"],
-    ["donald", "trump", "(ameracan)"],
-    ["Jacinda", "Ardern", "(Kiwi)"]
-]
+// let people = [
+//     ["adon", "moskal", "(canadian)"],
+//     ["donald", "trump", "(ameracan)"],
+//     ["Jacinda", "Ardern", "(Kiwi)"]
+// ]
 
 //2 ways to convert array to string
 
@@ -34,19 +34,37 @@ let people = [
 //     console.log(name); 
 // })
 
-people.forEach(person => console.log(person.join(" ")));
+// people.forEach(person => console.log(person.join(" ")));
 
 
-//sorting and filtering
+// //sorting and filtering
 
-let filterd = people.filter (person => person[1].lenght > 5);
+// let filterd = people.filter (person => person[1].lenght > 5);
 
-filterd.sort((a,b) => {
-    if(a[1] > b[1])
-        return 1;
-    else
-        return -1;
+// filterd.sort((a,b) => {
+//     if(a[1] > b[1])
+//         return 1;
+//     else
+//         return -1;
     
-});
+// });
 
-console.log(filterd);
+// console.log(filterd);
+
+let calendar = document.querySelector(".calendar");
+
+document.querySelector(".llegada").addEventListener("click",
+    calendar.classList.toggle("active")
+    );
+
+    let inner_grid = document.createElement("div");
+    inner_grid.classList.add("inner_grid");
+
+    for(let i =1; i <= 31;i++){
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.innerHTML = i;
+        inner_grid.append(square);
+    }
+
+calendar.append(month,inner_grid);
