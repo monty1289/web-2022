@@ -143,5 +143,30 @@ let div = document.querySelector("div");
 console.log(div);
 div.style.color = "red";
 
+let board = document.querySelector(".board");
+for(let i = 0;i < 9;i++){
+ let square = document.createElement("div");
+  square.classList.add("square");
+  board.append(square);
+}
 
+let last_turn = "X";
+
+// write your code here
+
+board.querySelectorAll("div.square").forEach(s => {
+    s.addEventListener("click", e => {
+        if(e.target.innerHTML == "")
+        {
+            e.target.innerHTML = last_turn;
+            if(last_turn == "X"){
+                last_turn = "0";
+            }else{
+                last_turn = "X";
+            }
+        }
+        
+    });
+       
+})
  
