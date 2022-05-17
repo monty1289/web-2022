@@ -14,3 +14,16 @@
     align-items:center;
     justify-content:center;
   }
+
+  .product_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+  }
+
+  .product{
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }

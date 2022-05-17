@@ -169,4 +169,32 @@ board.querySelectorAll("div.square").forEach(s => {
     });
        
 })
- 
+
+const BASE_URL = "https://api.unsplash.com/";
+
+
+ fetch(`${BASE_URL}/search/photos?client_id=CMAyJGNzgg9IMwKa9iN0NGq-ZMbK_FSv2TMY8ynf6Y8&query=cats`)
+ .then(response => response.json())
+    .then(d => {
+    d["results"].forEach(r => {
+        let product = document.createElement("div");
+        product.classList.add('product');
+        product.style.backgroundImage = `url(${r["urls"]["regular"]})`;        
+        document.querySelector(".product_grid").append(product);
+    })
+});
+
+const pokemonURL = "https://pokeapi.co/api/v2"
+
+fetch(`${pokemonURL}/pokemon`)
+.then(response => response.json())
+    .then(da => { 
+        //console log da ["results"] to see inside the 
+        //array then forloop the items
+        da["results"].forEach(item => {
+            let poke = document.createElement("div");
+            div.innerHTML = item["name"];
+            console.log(item["name"]);
+            document.querySelector("body").append(div);
+        })    
+});
