@@ -184,6 +184,10 @@ const BASE_URL = "https://api.unsplash.com/";
     })
 });
 
+
+//let ul = document.createElement("ul");
+//document.querySelector("body").append(ul);
+
 const pokemonURL = "https://pokeapi.co/api/v2"
 
 fetch(`${pokemonURL}/pokemon`)
@@ -191,10 +195,22 @@ fetch(`${pokemonURL}/pokemon`)
     .then(da => { 
         //console log da ["results"] to see inside the 
         //array then forloop the items
-        da["results"].forEach(item => {
-            let poke = document.createElement("div");
-            div.innerHTML = item["name"];
-            console.log(item["name"]);
-            document.querySelector("body").append(div);
+        da["results"].forEach(pokemon => {
+            let url = pokemon["url"];
+            let name = pokemon['name'];
+            
+
+            fetch(url)
+            .then(response2 => response2.json())
+            .then(da2 => {
+                let abilities = da2["abilities"].length;
+                let li = document.createElement('li');
+                li.innerHTML = `${name} (${abilities} abilities)` 
+                document.querySelector("body").append(li);
+                //ul.append(li);
+            });
         })    
 });
+
+
+   

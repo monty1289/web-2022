@@ -56,9 +56,53 @@
 
     <ul id="medalList"></ul>
 
-    <script>                              
+    <script>          
+        let medalList = document.querySelector("#medalList");                    
 
-        /* PUT YOUR CODE FOR QUESTION 1 HERE */
+        fetch("https://gist.githubusercontent.com/dfenders/8ceec1cc3ec2d05c9ac7ebbe58e03774/raw/fea0abe2f813a4790d5626eeb87c99a0775a3620/olympics.json")
+            .then(res => res.json())
+            .then (data => { 
+                const Olympics = data;
+                Olympics.sort((a,b) => {
+                    if (a.gold + a.silver + a.bronze > b.gold + b.silver + b.bronze)
+                    return -1;
+                else
+                    return 1;
+                });
+                Olympics.splice(10);
+                console.log(Olympics);
+
+                Olympics.forEach(country => {
+                    let li = document.createElement("li");
+                    let div = document.createElement("div");
+                    li.innerHTML = country["country"];
+                    li.append(div);
+
+                    for(let i=0;i<country.gold;i++)
+                    {
+                        let medal = document.createElement("div")
+                        medal.classList.add("gold","medal");
+                        li.append(medal);
+                    }
+
+                    for(let i=0;i<country.silver;i++)
+                    {
+                        let medal = document.createElement("div")
+                        medal.classList.add("silver","medal");
+                        li.append(medal);
+                    }
+
+                    for(let i=0;i<country.bronze;i++)
+                    {
+                        let medal = document.createElement("div")
+                        medal.classList.add("bronze","medal");
+                        li.append(medal);
+                    }
+
+                    medalList.append(li);
+                });
+                
+            })
 
         
 
@@ -95,11 +139,20 @@
             {"name" : "Aladdin"}
         ];
 
+        let aPeople; 
         
         /* PUT YOUR CODE HERE */
         
-        let aPeople = people.filter (person => person[1].length == "A");
-        
+        aPeople = people.filter(person => {
+            //return person["name"][0] == "A";
+            return person.name.startsWith("A");
+        }).sort((a,b) => {
+            if (a.name > b.name)
+             return 1;
+            else
+            return -1
+        })
+
         console.log(aPeople)
 
 
@@ -122,10 +175,16 @@
     -->
 
     <style>
-        .container{ border: 2px solid hotpink;background:lightpink;width:500px;height:500px; }
+        .container{ 
+            border: 2px solid hotpink;
+            background:lightpink;
+            width:500px;
+            height:500px;
+            /* display: flex;  */
+        }
 
         .inner{
-            display:block;
+            box-sizing: border-box;
             width:100%;
             padding:30px;
             border:6px solid blue;
@@ -155,8 +214,7 @@
 
     <script>
 
-        const myVar = "This SBA is hard";
-        myVar = "This SBA is too easy!";
+        let myVar = "This SBA is too easy!";
         console.log(myVar);
 
     </script>
@@ -181,7 +239,7 @@
 
         const testArray= ["Test"];
 
-        let testFunction = (testArray) => {
+        let testFunction = () => {
             for (let i = 0; i < testArray.length; i++) {
                 console.log(testArray[i]);
             }
