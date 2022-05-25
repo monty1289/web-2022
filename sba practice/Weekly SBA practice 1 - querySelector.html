@@ -27,6 +27,25 @@
 
         let colours = ["blue","hotpink","maroon","greenyellow"];
 
+        let element = document.getElementById("container");
+        element.style.fontSize = "60px";
+
+        let items = document.getElementsByClassName("item");
+        let nums = document.getElementsByClassName("number");
+        console.log(nums)
+        
+        console.log(items[0])
+        
+        
+        
+        for (let i = 0; i < items.length; i++) 
+        {
+            items[i].style.backgroundColor = colours[i];
+            nums.innerHTML = i
+            
+        };              
+        
+
         /*
         
         Using JAVASCRIPT ONLY (i.e. do not write any CSS styles), do the following:

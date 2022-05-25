@@ -154,6 +154,8 @@ let last_turn = "X";
 
 // write your code here
 
+//norts and crosses
+
 board.querySelectorAll("div.square").forEach(s => {
     s.addEventListener("click", e => {
         if(e.target.innerHTML == "")

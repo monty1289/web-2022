@@ -10,7 +10,7 @@
 <style>
 
     .page{
-        width:30vw;
+        width:80vw;
         height:75vh;
         border:1px solid #333;       
         overflow:hidden; 
@@ -65,7 +65,15 @@
             do that in JS. Replace the contents of the h3 with the generated date.
         
         */
+       const base_url = "https://random-word-form.herokuapp.com/";
 
+        fetch("https://random-word-form.herokuapp.com/random/noun")
+        .then(res => res.json())
+            .then (data => { 
+                console.log(data);
+                let name = document.querySelector(".bandName");
+                name.innerHTML == data
+            });
 
     </script>
 
