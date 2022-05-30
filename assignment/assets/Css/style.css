@@ -55,7 +55,7 @@ body{
 
 .navbar li{
     padding: 20px;
-    border-right: 1px solid rgb(222, 225, 234);
+    border-left: 1px solid rgb(222, 225, 234);
 }
 
 .left-nav{
@@ -64,11 +64,9 @@ body{
     flex-direction: column;    
 }
 
+
 .center-nav{
-    background-color: rgb(255, 255, 255);
-    -webkit-box-flex: 3;
-    flex-grow: 3;
-    display: grid;
+    background-color: rgb(255, 255, 255);     
     place-items: center;
     padding: 10px;
 }
@@ -79,7 +77,41 @@ body{
     z-index: 1;
 }
 
-.menu-button{      
+.inner_grid{
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr); */
+}
+
+.storeList{
+    font-size: large;
+    justify-content: left;
+}
+
+.secondRow{
+    flex-wrap: ;
+}
+
+
+
+.menu{
+    opacity: 0;   
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    left: 0;    
+    width: 200%;
+    height: 500px;
+    z-index: 1;
+    transition: opacity 0.5s linear;
+    
+}
+
+.menu.active{
+    opacity: 1;
+}
+
+.menubutton{      
     font: inherit;
     margin: 0px;
     display: grid;

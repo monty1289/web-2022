@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBA 2022</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- Q1 (11 marks)
+
+        You are creating a simple TODO app.
+
+        You are given a text input box, and a list of example TODOs.
+
+        When you click the "Create TODO" button, your app should:
+
+            1. Take whatever text is in the input and create a new TODO with it.
+            2. Append the new TODO to the end of the list.
+            3. Clear the input text box (reset its value to empty).
+            4. Nothing should happen if the input box is empty (i.e. no TODO is added to the list).
+
+        Your TODO needs to include the text and the "DELETE" button (the 'X' on the right).
+
+    -->
+
+    <style>
+        :root{
+            --light-colour:#fff1d6;
+            --dark-colour:#a37820;
+        }
+
+        body{ margin:0 }
+
+        input.todo_maker{
+            padding:5px;
+            margin-bottom:10px;
+        }
+
+        button.todo_maker{
+            padding:5px;
+        }
+
+        ul.todos{ 
+            font-family:Arial, sans-serif;
+            margin:0; 
+            padding: 0; 
+            list-style:none; 
+            max-width:800px;
+            border-right:1px solid var(--dark-colour);
+            border-top:1px solid var(--dark-colour);
+        }
+
+        ul.todos li{
+            display:flex;
+            align-items:center;
+            padding:10px;
+            color:var(--dark-colour);
+            background:var(--light-colour);
+            border-bottom:1px solid var(--dark-colour);
+        }
+
+        ul.todos li i{ 
+            margin-left:auto;
+            cursor:pointer 
+        }
+    </style>
+
+    <input class="todo_maker" type="text" />
+
+    <button class="todo_maker">Make new TODO</button>
+    
+    <ul class="todos">
+        <li>
+          Buy milk
+          <i class="fa-solid fa-xmark"></i>
+        </li>
+        <li>
+          Post letters
+          <i class="fa-solid fa-xmark"></i>
+        </li>
+        <li>
+          Visit grandma
+          <i class="fa-solid fa-xmark"></i>
+        </li>
+    </ul>
+
+    <script>
+
+        let ul = document.querySelector("ul.todos");        
+
+        /* WRITE YOU SOLUTION TO Q1 HERE */
+        let typing = document.querySelector("input")
+        
+        let btn = document.querySelector("button.todo_maker");
+        btn.addEventListener("click", e => 
+        {
+             let li =document.createElement("li");
+             let val = document.querySelector("input.todo_maker").value;
+             console.log("val");
+
+             if(val != "")
+             {
+                li.innerHTML = val; 
+             
+                let i  = document.createElement("i");
+                i.classList.add("fa-solid","fa-xmark");
+            
+                li.append(i)
+                ul.append(li);
+             }
+
+             document.querySelector("input.todo_maker").value = "";
+        })
+
+    </script>
+
+    <!-- END OF QUESTION 1 ------------------------------------------------------------------>
+
+    <!-- Q2 (5 marks)
+
+        Rig up the "DELETE" button for the TODOs in Q1.
+
+        When you click on one of the "X" icons in a TODO, it should remove the 
+        entire li from the list.
+
+        Write your solution in such a way as to handle both the provided TODOs 
+        and any new ones you create from pressing the button (even if you HAVEN'T DONE
+        Q1 successfully, you should still be able to write the code to handle ANY AND ALL TODOs.)
+
+        Note: This question is worth 5 marks total - solutions that successfully handle the 
+        existing TODOs but fail to handle newly created TODOs will incur a 1 mark penalty
+        (max: 4 marks available for successful solutions).
+
+    -->
+
+    <script>
+
+        /* WRITE YOUR SOLUTION FOR Q2 HERE */
+        document.querySelectorAll(".fa-solid.fa-xmark").forEach(i => {
+            bindElement(i);   
+        })
+
+        function bindElement(i) {
+            i.addEventListener("click", e => {
+                let parent = e.target.parentElement;
+                parent.remove();
+            });
+
+        }
+       
+        
+
+    </script>
+
+    <!-- END OF QUESTION 2 ------------------------------------------------------------------>
+
+    <!-- Q3 (2 marks)
+
+        Below is a grid layout with 4 divs inside. You need to add the appropriate styles
+        to make the grid look like the example shown in the PDF.
+        DO NOT change the HTML or existing styles in any way - do not add or remove elements.
+        You need only add new styles.
+
+    -->
+
+    <style>
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+        }
+
+        .grid div{
+            border:1px solid black;
+            padding:50px;
+            outline:1px solid black;
+        }
+        
+        /* ADD YOUR STYLES HERE */        
+        .item-1{            
+            grid-row: 1 / 3;            
+        }      
+        
+
+        .item-4{
+            grid-column: 2 / 4;
+        }
+
+        
+
+
+    </style>
+
+    <div class="grid">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+    </div>
+
+    <!-- END OF QUESTION 3 ------------------------------------------------------------------>
+
+    <!-- Q4 (2 marks)
+
+        The following JavaScript does not behave as expected - the code is trying to filter
+        only names in the array that are longer than 3 letters. However, logging out 'arr'
+        after the filter shows all 4 names still.
+
+        Answer the following questions:
+
+            1. Why doesn't the code work as written... explain in a brief sentence. (1 mark)
+
+                -> PUT YOUR ANSWER HERE because its just displaying the original array
+
+            2. Fix the code so it works as intended. (1 mark)
+
+                - PUT YOUR ANSWER BELOW IN THE SCRIPT
+
+    -->
+
+    <script>
+
+        let arr = ["Bob","Adon","Sam","Lisa"];
+
+        let NewArr = arr.filter(x => (x.length) > 3);
+        console.log(NewArr);
+
+    </script>
+
+    <!-- END OF QUESTION 4 ------------------------------------------------------------------>
+
+    <!-- Q5 (2 marks)
+    
+        There is an error in the console! (See the PDF for more details)
+        
+            1. Explain what is causing the error. (1 mark)
+
+                -> PUT YOUR ANSWER HERE its looking for and element instead of a class
+            
+            2. Fix the code so it works as expected. (1 mark)
+            
+                - PUT YOUR ANSWER BELOW IN THE SCRIPT
+    
+    -->
+
+    <div class="myDiv"></div>
+
+    <script>
+
+        document.querySelector(".myDiv").innerHTML = "This should be in the div!";
+
+    </script>
+
+    <!-- END OF QUESTION 5 ------------------------------------------------------------------>
+
+    <!-- Q6 (8 marks)
+    
+        Assemble the Avengers! (literally...)
+        We have 2 data files at 2 different URLs - 1 has first names, and the 2nd has 
+        last names.
+        You need to assemble the full names of these Avengers and print them out in
+        the ordered list below - you SHOULD NOT add new li elements to the ol - USE THE
+        EXISTING ONES INSTEAD to display your names. (See PDF for final result.)
+
+        The first names can be found at: https://gist.githubusercontent.com/dfenders/0fe9021b4242d83d973ac7087287e166/raw/8c0bda392b0381cfd254b719360e177fdf98b1ab/firstNames.json
+        The last names can be found at: https://gist.githubusercontent.com/dfenders/0fe9021b4242d83d973ac7087287e166/raw/8c0bda392b0381cfd254b719360e177fdf98b1ab/lastNames.json
+    
+    -->
+
+    <ol id="avengers">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+
+    <script>
+
+        /* PUT YOUR ANSWER FOR Q6 HERE */
+        let ol = document.querySelector("ol#avengers");
+
+        fetch("https://gist.githubusercontent.com/dfenders/0fe9021b4242d83d973ac7087287e166/raw/8c0bda392b0381cfd254b719360e177fdf98b1ab/firstNames.json")
+            .then(res => res.json())
+            .then (data => {                 
+                    
+                    let FirstName = name;
+
+                    fetch("https://gist.githubusercontent.com/dfenders/0fe9021b4242d83d973ac7087287e166/raw/8c0bda392b0381cfd254b719360e177fdf98b1ab/lastNames.json")
+                    .then(res2 => res2.json())
+                    .then (d => { 
+                        let lastName = name2["names"];
+                        ol.querySelectorAll("li").forEach((li, i) => {
+                            let fname = FirstName[i];
+                            let lname = lastName[i];
+
+                            li.innerHTML = `${fname["name"]} ${lname["name"]}`
+
+                        })
+                    })
+                    
+                })
+                
+            
+
+            
+    </script>
+
+    <!-- END OF SBA ------------------------------------------------------------------>
+
+</body>
+</html>

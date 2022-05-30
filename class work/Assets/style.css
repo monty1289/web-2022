@@ -89,38 +89,34 @@ body{
     position: relative;
 }
 
-.calender{
-    padding: 50px;
-    opacity: 0;
-    background:#e0e1df;
+.calender{    
+    opacity: 0;   
+    background:var(--main-bg-colour);
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    left: 0;    
     width: 200%;
-    transition: opacity 0.5 linear;
+    z-index: 1;
+    transition: opacity 0.5s linear;
 }
 
-.calender .active{
+.calender.active{
     opacity: 1;
 }
 
 .inner_grid{
     display: grid;
-    grid-template-columns: repeat();
-    width: fit-content;
+    grid-template-columns: repeat(7, 1fr);
+    
+    
 }
 
 .inner_grid .square{
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-img{
+#img{
     width: 100%;
 }
 

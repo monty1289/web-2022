@@ -207,7 +207,8 @@ fetch(`${pokemonURL}/pokemon`)
             .then(da2 => {
                 let abilities = da2["abilities"].length;
                 let li = document.createElement('li');
-                li.innerHTML = `${name} (${abilities} abilities)` 
+                li.innerHTML = `${name} (${abilities} abilities)`
+                 
                 document.querySelector("body").append(li);
                 //ul.append(li);
             });
