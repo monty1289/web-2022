@@ -4,37 +4,39 @@ document.querySelector(".menubutton").addEventListener("click", e =>{
     e.target.querySelector(".menu").classList.toggle("active");
 })
 
-let inner_grid = document.createElement("div")
-inner_grid.classList.add(".inner_grid");
 
-let inspiration = document.createElement("li");
-inspiration.classList.add("storeList");
-inspiration.innerHTML = "Inspiration"
-inner_grid.append(inspiration);
+let inner_flex = document.createElement("div")
+inner_flex.classList.add(".inner_flex");
+menu.append(inner_flex);
 
-let greenUp = document.createElement("li");
-greenUp.classList.add("storeList");
-greenUp.innerHTML = "greenUp"
-inner_grid.append(greenUp);
+let secondRow = document.createElement("div")
+secondRow.classList.add(".secondRow");
+menu.append(secondRow);
 
-let About = document.createElement("li");
-About.classList.add("storeList");
-About.innerHTML = "About"
-inner_grid.append(About);
+let menuList = (type,clazz,innerHTML) => {
+    let element = document.createElement(type);
+    element.classList.add(clazz);
+    element.innerHTML = innerHTML;
+    inner_flex.append(element);
+}
 
-let CustomerService = document.createElement("li");
-CustomerService.classList.add("storeList");
-CustomerService.innerHTML = "Customer Service"
-inner_grid.append(CustomerService);
+let menuList2 = (type,clazz,innerHTML) => {
+    let element = document.createElement(type);
+    element.classList.add(clazz);
+    element.innerHTML = innerHTML;
+    secondRow.append(element);
+}
 
-let contact = document.createElement("li");
-contact.classList.add("storeList");
-contact.innerHTML = "contact"
-inner_grid.append(contact);
+menuList("li","storeList","Inspiration");
+menuList("li","storeList","greenUp");
+menuList("li","storeList","About");
+menuList("li","storeList","Customer Service");
+menuList("li","storeList","contact");
 
-let Academies = document.createElement("li");
-Academies.classList.add("secondRow");
-Academies.innerHTML = "Academies"
-inner_grid.append(Academies);
+menuList2("li","Helper","Academies");
+menuList2("li","Helper","Privacy statement");
+menuList2("li","Helper","terms and conditions");
+menuList2("li","Helper","store locator");
 
-menu.append(inner_grid);
+
+

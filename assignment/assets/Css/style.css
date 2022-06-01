@@ -77,19 +77,25 @@ body{
     z-index: 1;
 }
 
-.inner_grid{
-    display: flex;
-    /* grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr); */
+.inner_flex{
+    display: flex; 
+    flex-direction: column;   
 }
 
+
+
 .storeList{
-    font-size: large;
+    font-size: 30px;
     justify-content: left;
+    padding-left: 200px;
+    border-left: 0ch;
+    width: 500px;
+    
+    
 }
 
 .secondRow{
-    flex-wrap: ;
+    
 }
 
 
@@ -104,6 +110,8 @@ body{
     height: 500px;
     z-index: 1;
     transition: opacity 0.5s linear;
+    display: flex;
+    justify-content: flex-start;
     
 }
 
