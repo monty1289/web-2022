@@ -77,28 +77,37 @@ body{
     z-index: 1;
 }
 
+.right-nav:last-child{
+    padding-right: 100px;
+}
+
 .inner_flex{
     display: flex; 
     flex-direction: column;   
 }
 
-
+.left-nav a{
+    color: black;
+}
 
 .storeList{
-    font-size: 30px;
+    font-size: 25px;
     justify-content: left;
-    padding-left: 200px;
+    padding-left: 0px;    
     border-left: 0ch;
-    width: 500px;
-    
-    
+    width: 400px;    
 }
 
-.secondRow{
-    
+.helper li{
+
 }
 
-
+h5{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-left: 1px solid rgb(222, 225, 234);
+}
 
 .menu{
     opacity: 0;   
@@ -161,7 +170,7 @@ body{
     z-index: 1;
 }
 
-.title1 {
+.title {
     font-size: 60px;
     font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
     line-height: 1;
@@ -169,12 +178,15 @@ body{
     color: #ffffff;
 }
 
-.title2 {
+.title1{
+    padding: 100px;
+    padding-left: 450px;
     font-size: 60px;
     font-family: FuturaPT, "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
     line-height: 1;
     text-transform: uppercase;
-    color: #ffffff;
+    color: rgb(33, 56, 117);
+    font-weight: 700;
 }
 
 .shop-now {
@@ -184,6 +196,10 @@ body{
     text-transform: uppercase;
     color: #ffffff;
     padding-top: 40px;
+}
+
+a{
+    color: #ffffff;
 }
 
 .womanKidsMen{    
@@ -289,14 +305,40 @@ h2{
 
 footer{
     background-color: blue;
-    height: 500px;
-    text-align: center;
+    height: 300px;
+    
     
 }
 
 h3{
     color: #ffffff;
 }
+
+.footerUp{
+    width: 100%;
+    height: 40%;
+    border-bottom: 1px solid rgb(222, 225, 234);
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    justify-content: space-evenly;
+    font-weight: 800;
+}
+
+footer li{
+    padding-top: 20px;
+    list-style: none; 
+    
+       
+}
+
+.footerDown{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+
 
 
 
