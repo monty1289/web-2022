@@ -9,6 +9,7 @@ app.set('views', './views')
 
 const index_router = require('./routes/index')
 const products_router = require('./routes/products')
+const api_router = require('./routes/api')
 // Add all the routers you might have together here...
 
 app.use("/", index_router)
