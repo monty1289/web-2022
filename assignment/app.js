@@ -1,4 +1,5 @@
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
 const app = express()
 const PORT = process.env.PORT || 3000
 
@@ -13,8 +14,9 @@ const api_router = require('./routes/api')
 
 app.use("/", index_router)
 app.use("/api", api_router)
+app.use(expressLayouts)
 // Add corresponding 'use' statements for each router
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
-    })
+})
