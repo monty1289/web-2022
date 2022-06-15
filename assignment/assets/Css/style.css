@@ -115,7 +115,7 @@ h5{
     position: absolute;
     top: 100%;
     left: 0;    
-    width: 200%;
+    width: 100%;
     height: 500px;
     z-index: 1;
     transition: opacity 0.5s linear;
@@ -254,7 +254,8 @@ a{
 .big_img{    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 150vh;
+    height: 100vh;    
+    width: 100%;
     padding-bottom: 50px;
 }
 
@@ -276,6 +277,7 @@ a{
     grid-template-columns: repeat(7, 1fr);
     height: 500px;
     padding: 50px;
+    overflow: hidden;
 }
 
 .bestSellers img{
@@ -295,6 +297,7 @@ h2{
     grid-template-columns: repeat(8, 1fr);
     height: 1000px;
     padding: 50px;
+    overflow: hidden;
 }
 
 .categories img{

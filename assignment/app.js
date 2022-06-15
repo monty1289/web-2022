@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts')
 const app = express()
 const PORT = process.env.PORT || 3000
 
+app.use(expressLayouts)
 app.use(express.static('assets'))
 app.set('view engine', 'ejs')
 app.set('views', './views')
@@ -14,7 +15,7 @@ const api_router = require('./routes/api')
 
 app.use("/", index_router)
 app.use("/api", api_router)
-app.use(expressLayouts)
+
 // Add corresponding 'use' statements for each router
 
 app.listen(PORT, () => {
