@@ -6,7 +6,7 @@ router.get("/", index_controller.index)
 .get("/womens", index_controller.womens)
 .get("/boys", index_controller.boys)
 .get("/girls", index_controller.girls)
-.get("/toddlers", index_controller.toddlers)
+.get("/electronics", index_controller.electronics)
 
 
 module.exports = router

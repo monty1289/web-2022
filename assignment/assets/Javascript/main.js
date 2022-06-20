@@ -55,4 +55,9 @@ menuList3("li","info","071-3050210");
 menuList3("li","info","ma – vr: 09:00 – 17:00");
 
 
-
+// let menuList = (type,clazz,placement,innerHTML) => {
+//     let element = document.createElement(type);
+//     element.classList.add(clazz);
+//     element.innerHTML = innerHTML;
+//     (placement).append(element);
+// }

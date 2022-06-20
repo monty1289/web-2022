@@ -341,6 +341,26 @@ footer li{
     padding-top: 30px;
 }
 
+/* mens page */
+
+.cloths-line{
+    display: grid;
+    grid-template-columns: repeat(3, 60vh [col-start]);
+    grid-template-rows: auto;    
+    width: fit-content;
+    
+  }
+
+  .product{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    align-items: center;   
+    height: 350px;
+    background-size:cover;
+    background-position: center;
+  }
+
 
 
 
