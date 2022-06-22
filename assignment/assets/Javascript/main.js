@@ -1,7 +1,19 @@
 let menu = document.querySelector(".menu");
 
+const transition = document.querySelector('.menu');
+
+transition.addEventListener('transitionend', e => {
+  if(e.target.classList.contains("active"))
+    console.log("has active");
+  else
+    e.target.style.left = "-100%";
+});
+
 document.querySelector(".menubutton").addEventListener("click", e =>{
-    e.target.querySelector(".menu").classList.toggle("active");
+    let menu = e.target.querySelector(".menu");
+    menu.classList.toggle("active");
+    if(menu.classList.contains("active"))
+        menu.style.left = "0";
 })
 
 

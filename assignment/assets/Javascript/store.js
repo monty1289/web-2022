@@ -10,14 +10,13 @@ let fetchimage = (category, parentClass) => {
         data.forEach(item =>{
 
             let product = document.createElement("div");
-            product.classList.add('product');
-            product.innerHTML = `${item["title"]}`;
+            product.classList.add('product');            
             product.style.backgroundImage = `url(${item["image"]})`;
             document.querySelector(parentClass).append(product)
 
-            // let title = document.createElement("li")
-            // title.innerHTML = `${item["title"]}`;
-            // document.querySelector(".product").append(title)
+             let title = document.createElement("li")
+             title.innerHTML = `${item["title"]}`;
+             product.append(title)
         })
     })  
 }     
