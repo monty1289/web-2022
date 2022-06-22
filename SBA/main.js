@@ -178,9 +178,11 @@ const BASE_URL = "https://api.unsplash.com/";
  fetch(`${BASE_URL}/search/photos?client_id=CMAyJGNzgg9IMwKa9iN0NGq-ZMbK_FSv2TMY8ynf6Y8&query=cats`)
  .then(response => response.json())
     .then(d => {
+        console.log(d["results"])
     d["results"].forEach(r => {
         let product = document.createElement("div");
         product.classList.add('product');
+        console.log(r);
         product.style.backgroundImage = `url(${r["urls"]["regular"]})`;        
         document.querySelector(".product_grid").append(product);
     })
