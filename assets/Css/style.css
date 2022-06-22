@@ -356,8 +356,7 @@ footer li{
     display: grid;
     grid-template-columns: repeat(3, 60vh [col-start]);
     grid-template-rows: auto;    
-    width: fit-content;
-    
+    width: fit-content;    
 }
 
 
@@ -375,8 +374,7 @@ footer li{
     text-transform: uppercase;
     color: rgb(33, 56, 117);
     font-weight: 700;
-    text-align: center;
-        
+    text-align: center;        
 }
 
 .product:hover{
@@ -385,21 +383,10 @@ footer li{
 
 .product:nth-child(2n){
     height: 500px;
-    width: 500px;
-    
-    
+    width: 500px;   
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product li{
+    padding-top: 500px;
+    list-style: none;
+}
