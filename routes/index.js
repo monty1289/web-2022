@@ -9,4 +9,5 @@ router.get("/", index_controller.index)
 .get("/electronics", index_controller.electronics)
 
 
+
 module.exports = router
