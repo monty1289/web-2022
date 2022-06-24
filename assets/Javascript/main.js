@@ -1,3 +1,8 @@
+/*
+fuctions made too create the menu dropdown list 
+*/
+
+
 let menu = document.querySelector(".menu");
 
 const transition = document.querySelector('.menu');
@@ -51,18 +56,18 @@ let menuList3 = (type,clazz,innerHTML) => {
 }
 
 menuList("li","storeList","Inspiration");
-menuList("li","storeList","greenUp");
+menuList("li","storeList","greenUp");           //1st coloumn in dropdown
 menuList("li","storeList","About");
 menuList("li","storeList","Customer Service");
 menuList("li","storeList","contact");
 
 menuList2("li","Helper","Academies");
-menuList2("li","Helper","Privacy statement");
+menuList2("li","Helper","Privacy statement");       //2nd coloumn in dropdown
 menuList2("li","Helper","terms and conditions");
 menuList2("li","Helper","store locator");
 
 menuList3("h5","info","Get in Touch");
-menuList3("h5","info","Kantoor:");
+menuList3("h5","info","Kantoor:");              //3rd coloumn in dropdown
 menuList3("li","info","071-3050210");
 menuList3("li","info","ma – vr: 09:00 – 17:00");
 
@@ -73,3 +78,4 @@ menuList3("li","info","ma – vr: 09:00 – 17:00");
 //     element.innerHTML = innerHTML;
 //     (placement).append(element);
 // }
+//never displayed correctly

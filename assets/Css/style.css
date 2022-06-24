@@ -58,6 +58,7 @@ body{
     border-left: 1px solid rgb(222, 225, 234);
 }
 
+
 .left-nav{
     display: flex;    
     flex-direction: column; 
@@ -170,6 +171,23 @@ h5{
     height: 100%;
     color: rgb(33, 56, 117);
 }
+
+@media screen and (max-width: 50%) {
+    .menu{
+        width: 40%;
+    }
+
+    .center-nav{
+        position: absolute;
+        opacity: 0;
+    }
+
+    .logo{
+        height: 0;
+    }
+  }
+
+
 /* layout */
 
 /* index */
@@ -344,6 +362,25 @@ img:hover{
     padding-left: 10px;
     padding-bottom: 100px;
 }
+
+@media screen and (max-width: 50%) {
+    .big_img{
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        height: inherit;
+        overflow: hidden;
+    }
+
+    .cycling{
+        grid-column: 1;
+    }
+
+    .mix_match{
+        grid-column: 1;
+        grid-row: 2;
+    }
+  }
 /* index */
 
 /* footer */
@@ -417,7 +454,7 @@ footer li{
 }
 
 .product:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .product:nth-child(2n){
@@ -446,4 +483,51 @@ footer li{
     }
   }
 
-/* 404 page */
+/* login */
+
+.back{
+    background-color:rgb(255, 255, 255);
+    height: 1000px;    
+    padding-top: 100px;
+    padding-left: 20%;
+    
+}
+
+#userLog{
+height: 50%;
+width: 70%;
+background-color: bisque;
+}
+
+#loglable {
+padding: 50px;
+margin: 0px;
+font-size: 40px;
+padding-left: 150px;
+}
+
+.name{
+    padding-left: 35%;
+    padding-bottom: 50px;
+}
+
+#logname{
+width: 30%;
+color: rgb(0, 0, 0);
+}
+
+#Loginbu{
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 38%;
+    height: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 35%;
+}

@@ -16,11 +16,6 @@ const api_router = require('./routes/api')
 app.use("/", index_router)
 app.use("/api", api_router)
 
-//catch 404 and forward to error handler
-app.get("*",(req, res)=>{
-    req.sendFile(__dirname + "/error")
-})
-
 // Add corresponding 'use' statements for each router
 
 app.listen(PORT, () => {

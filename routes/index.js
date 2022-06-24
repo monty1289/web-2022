@@ -7,6 +7,7 @@ router.get("/", index_controller.index)
 .get("/boys", index_controller.boys)
 .get("/girls", index_controller.girls)
 .get("/electronics", index_controller.electronics)
+.get("/login", index_controller.login)
 
 
 

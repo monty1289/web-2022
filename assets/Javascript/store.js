@@ -1,6 +1,8 @@
+/*
+js function to fetch image and title from api and use for the store pages 
+*/
+
 const BASE_URL = 'https://fakestoreapi.com/products'
-
-
 
 let fetchimage = (category, parentClass) => {
     fetch(`${BASE_URL}/category/${category}`)
@@ -26,12 +28,4 @@ fetchimage("women's clothing", ".W")
 fetchimage("electronics", ".E")
 fetchimage("jewelery", ".G")
 fetchimage("men's clothing", ".B")
-
-
-
-fetch(`${BASE_URL}`)
-    .then(res=>res.json())
-    .then(data=> {   
-        console.log(data)
-        
-    })  
+  
