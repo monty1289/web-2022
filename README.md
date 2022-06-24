@@ -2,10 +2,10 @@
 
 ## Objective of Assignment
 
-The objective of this assignement is to create a website that show the shills I have learnt throught this simester using html, CSS, Javercript, and EJS.  
+The objective of this assignment is to create a website that show the shills I have learnt through this semester using html, CSS, Javascript, and EJS.  
 
 ## Reference site
-The site i have been using as my referance to create my website is Protect sportswear
+The site i have been using as my reference to create my website is Protect sportswear
 ```
 https://www.protest.eu/en/global
 ```
@@ -14,12 +14,12 @@ https://www.protest.eu/en/global
 
 ### Local Deployment
 
-To run a local server, you must first this comand below in your terminal to recieve all the node files
+To run a local server, you must first this command below in your terminal to receive all the node files
 ```
 npm install
 ```
 
-Once files are installed run this comand in terminal 
+Once files are installed run this command in terminal 
 ```
 npm start
 ```
@@ -35,13 +35,13 @@ localhost:3000
 
 To get to the heroku app that been created, paste this link in your browser
 ```
-
+https://mighty-castle-51116.herokuapp.com/
 ```
 
 
 ## Known Bugs
 
--  Curreently the menu does interfer with the page when first loaded in but once clicking on the dropdown and click again to hide, the page will work normaly. (This will effect the login page too by not letting you type in text box)
+-  Currently the menu does interfere with the page when first loaded in but once clicking on the dropdown and click again to hide, the page will work normally. (This will effect the login page too by not letting you type in text box)
 
 -   Big_image div wont resize to fit in page when resizes
 
