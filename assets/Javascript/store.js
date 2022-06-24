@@ -1,5 +1,5 @@
 /*
-js function to fetch image and title from api and use for the store pages 
+    js function to fetch image and title from api and use for the store pages 
 */
 
 const BASE_URL = 'https://fakestoreapi.com/products'

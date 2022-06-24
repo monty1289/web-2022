@@ -12,6 +12,8 @@ https://www.protest.eu/en/global
 
 ## Site Deployment
 
+### Local Deployment
+
 To run a local server, you must first this comand below in your terminal to recieve all the node files
 ```
 npm install
@@ -31,7 +33,7 @@ localhost:3000
 
 ### Heroku deployment
 
-to get to the heroku app created, paste this link in your browser
+To get to the heroku app that been created, paste this link in your browser
 ```
 
 ```
@@ -39,7 +41,7 @@ to get to the heroku app created, paste this link in your browser
 
 ## Known Bugs
 
--  Curreently the menu does interfer witht he page when first loaded in but once clicking on the dropdown and click again to hid, the page will work normaly. (This will effect the login page too by not letting you type in text box)
+-  Curreently the menu does interfer with the page when first loaded in but once clicking on the dropdown and click again to hide, the page will work normaly. (This will effect the login page too by not letting you type in text box)
 
 -   Big_image div wont resize to fit in page when resizes
 
