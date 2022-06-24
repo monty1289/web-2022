@@ -1,15 +1,43 @@
 # web-2022
 
-##Objective of Assignment
+## Objective of Assignment
 
 The objective of this assignement is to create a website that show the shills I have learnt throught this simester using html, CSS, Javercript, and EJS.  
 
-the site i have been using as my referance to create my website is Protect sportswear
+## Reference site
+The site i have been using as my referance to create my website is Protect sportswear
 ```
 https://www.protest.eu/en/global
 ```
 
-##Known Bugs
+## Site Deployment
+
+To run a local server, you must first this comand below in your terminal to recieve all the node files
+```
+npm install
+```
+
+Once files are installed run this comand in terminal 
+```
+npm start
+```
+
+It should now say you have a port 3000, this means you local server is running
+
+Now in you browser type this
+```
+localhost:3000
+```
+
+### Heroku deployment
+
+to get to the heroku app created, paste this link in your browser
+```
+
+```
+
+
+## Known Bugs
 
 -  Curreently the menu does interfer witht he page when first loaded in but once clicking on the dropdown and click again to hid, the page will work normaly. (This will effect the login page too by not letting you type in text box)
 
